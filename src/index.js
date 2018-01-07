@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+import 'intersection-observer'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
