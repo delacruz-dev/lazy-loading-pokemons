@@ -8,10 +8,7 @@
  */
 export default function lazyLoadImage(entries, observer) {
     entries.forEach(entry => {
-        const isInViewport = entry.isIntersecting
-        console.log(isInViewport)
-
-        if (isInViewport) {
+        if (entry.isIntersecting) {
             observer.unobserve(entry.target)
             entry.target.src = entry.target.dataset.src
         }
@@ -22,6 +19,13 @@ export default function lazyLoadImage(entries, observer) {
  * Default config for the intersection observer
  */
 export const config = {
+    /**
+     *  Considering 96px for sprite, 288px = 3 sprites below the viewport
+     */
     rootMargin: '288px',
+    /**
+     * Triggers the callback when half of the sprite intersects the point
+     * at 288px below the lower margin of the viewport
+     */
     threshold: 0.5
 }

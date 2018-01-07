@@ -1,5 +1,5 @@
 {
-  "name": "lazy-load-components",
+  "name": "lazy-load-pokemons",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

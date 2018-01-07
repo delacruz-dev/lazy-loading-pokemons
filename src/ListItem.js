@@ -5,6 +5,7 @@ class List extends Component {
     componentDidMount () {
         this.props.observer.observe(this.image)
     }
+    
     render () {
         return (
             <li className='ListItem'>
